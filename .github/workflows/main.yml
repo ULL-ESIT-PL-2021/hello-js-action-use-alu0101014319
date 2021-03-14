@@ -3,7 +3,11 @@ on: [push]
 
 jobs:
   hello_world_job:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node-version: [12.x, 15.x]
     name: A job to say hello
     steps:
       # To use this repository's private action, you must check out the repository
