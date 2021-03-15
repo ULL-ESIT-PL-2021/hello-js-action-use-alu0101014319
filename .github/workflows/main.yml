@@ -17,7 +17,7 @@ jobs:
         uses: ULL-ESIT-PL-2021/hello-js-action-alu0101014319@v1.0.1
         id: hello
         with:
-          who-to-greet: 'Eduardo Estévez Rguez'
+          who-to-greet: 'Eduardo Estévez Rodríguez'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
